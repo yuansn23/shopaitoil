@@ -87,25 +87,25 @@
 
 </body>
 
+<!-- Event snippet for 潜客 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    window.location.href = url; // 进行跳转
-                }
-            };
-		// 663 潜客
-            gtag('event', 'conversion', {
-                'send_to': 'AW-10976787172/YfObCIL944AaEOT1kfIo',
-                'value': 5.0,
-                'currency': 'USD',
-                'event_callback': callback
-            });
-            return false;
-        }
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10976787172/YfObCIL944AaEOT1kfIo',
+      'value': 5.0,
+      'currency': 'USD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
-       
-    </script>
 	
 	
 </html>
